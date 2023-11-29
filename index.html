@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Project 152</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="base.js"></script>
+        <script src="car.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-camera position="0 5 10"></a-camera>
+            <a-sky color="#000000"></a-sky>
+
+            <a-asset timeout="10000">
+
+                <a-asset-item id="car-model" src="./car/source/Super car new.gltf"></a-asset-item>
+                <img id="texture" src="./car/textures/gltf_embedded_0.png">
+
+            </a-asset>
+
+            <a-entity id="car" position="0 1 0" rotation="0 180 0" scale="1 1 1" gltf-model="#car-model" src="#texture" move></a-entity>
+            <a-entity position="0 0 0" base></a-entity>
+        </a-scene>
+    </body>
+</html>
